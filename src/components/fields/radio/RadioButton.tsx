@@ -1,5 +1,5 @@
 //RadioComponent
-import { InputHTMLAttributes, forwardRef } from "react";
+import React,{ InputHTMLAttributes, forwardRef } from "react";
 
 type RadioOption = {
   value: number;

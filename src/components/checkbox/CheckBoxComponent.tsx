@@ -1,5 +1,5 @@
 //CheckBoxComponent
-import { InputHTMLAttributes, ReactNode, forwardRef } from "react";
+import React,{ InputHTMLAttributes, ReactNode, forwardRef } from "react";
 
 
 type CheckboxProps = InputHTMLAttributes<HTMLInputElement> & {
