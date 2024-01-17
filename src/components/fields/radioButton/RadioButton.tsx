@@ -71,3 +71,5 @@ export const RadioButtonComponent =  forwardRef<HTMLInputElement, InputProps>(({
   </div>
    
   )})
+
+  RadioButtonComponent.displayName = 'RadioButtonComponent';

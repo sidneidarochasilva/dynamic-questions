@@ -53,4 +53,4 @@ export const MultipleButtonComponent = ({
   );
 };
 
-
+MultipleButtonComponent.displayName = 'MultipleButtonComponent';

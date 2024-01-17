@@ -60,3 +60,4 @@ export const RatingComponent = ({
   );
 };
 
+RatingComponent.displayName = 'RatingComponent';

@@ -36,3 +36,5 @@ export const RadioComponent = forwardRef<HTMLInputElement, RadioProps>(({ descri
 
   );
 });
+
+RadioComponent.displayName = 'RadioComponent';

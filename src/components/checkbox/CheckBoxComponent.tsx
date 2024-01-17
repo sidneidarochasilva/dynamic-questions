@@ -9,6 +9,7 @@ type CheckboxProps = InputHTMLAttributes<HTMLInputElement> & {
 };
 
 export const CheckboxComponent = forwardRef<HTMLInputElement, CheckboxProps>(({ description, name, ...props }, ref) => {
+
   return (
     <>
       <h2 className="text-[12px] font-medium mt-4 leading-6 text-light-gray dark:bg-light-blue dark:text-gray-300 md:text-[14px]">
@@ -31,6 +32,9 @@ export const CheckboxComponent = forwardRef<HTMLInputElement, CheckboxProps>(({ 
     </>
   );
 });
+
+CheckboxComponent.displayName = 'CheckBoxComponent';
+
 
 const itemsCheck = [
   {

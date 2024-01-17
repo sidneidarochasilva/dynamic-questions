@@ -29,3 +29,5 @@ export const SelectComponent = forwardRef<HTMLSelectElement, SelectProps>(({ nam
     </div>
   );
 });
+
+SelectComponent.displayName = 'SelectComponent';
