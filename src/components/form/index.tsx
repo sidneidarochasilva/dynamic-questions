@@ -29,13 +29,6 @@ type Data = {
 };
 
 
-
-
-
-
-
-
-
 export default function Form({ ...props }) {
   const [data, setData] = useState<Data | null>(null);
   const [loading, setLoading] = useState(true);
@@ -78,7 +71,9 @@ export default function Form({ ...props }) {
     );
     const data = await response.json();
     setLoading(false);
-    console.log("error", data)
+
+    alert("Envio com erro!" + data);
+    
   };
 
   const enviarSuccess = async () => {
@@ -89,7 +84,7 @@ export default function Form({ ...props }) {
       );
 
       const data = await response.json();
-      alert("Enviado com sucesso!");
+      alert("Enviado com sucesso!" + data);
       setLoading(false);
 
     } catch (error) {
@@ -99,7 +94,7 @@ export default function Form({ ...props }) {
   };
 
   const enviarFakePost = async (event: React.FormEvent) => {
-    console.log("event", event)
+    
     setLoading(true);
     try {
       event.preventDefault();
@@ -225,9 +220,9 @@ export default function Form({ ...props }) {
 
 
 
-              <div className="flex justify-between mt-7">
+              <div className="flex justify-between gap-2 mt-7 flex-col md:flex-row md:text-center ">
                 <button onClick={() => enviarSuccess()} className="bg-[#FFB800] rounded-full p-2 w-40"> Enviar </button>
-                <button onClick={(e) => enviarFakePost(e)} className="bg-[#FFB800] rounded-full p-2 w-40"> Enviar Erro</button>
+                <button onClick={() => enviarErro()} className="bg-[#FFB800] rounded-full p-2 w-40"> Enviar Erro</button>
                 <button onClick={(e: any) => enviarFakePost(e.target)} className="bg-[#FFB800] rounded-full p-2 w-40"> Enviar post fake</button>
               </div>
 
